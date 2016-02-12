@@ -1,0 +1,154 @@
+/*!
+ * Start Bootstrap - Shop Homepage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    /*padding-top: 70px;*/ /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+#logo1{
+    font-family: cursive;
+    color: #12A5F4;
+}
+#logo2{
+    font-family: cursive;
+    color: #868686;
+}
+#logo_heading{
+    font-weight: 900;
+    font-size: 60px;
+}
+#top_cart{
+    background: #12A5F4;
+}
+#head_location{
+    font-weight: bold;
+    margin-left: 6px;
+    color: #fff;
+}
+#head_phone{
+    font-weight: bold;
+    margin-right: 6px;
+    color: #fff;
+}
+.input-search{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin-top: 10px;
+    width: 100%;
+}
+.input-search:focus {
+    background-image: none;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+ }
+
+
+/*---------------------change for new--------------------------------*/ 
+
+
+
+
+.nav>li:last-child .dropdown-menu{
+    display: none;
+}
+
+
+
+
+
+
+
+ /*.list-unstyled{
+    margin-left: 12px;
+    margin-top: 3px;
+ }*/
+ .list-unstyled li {
+    margin-bottom: 8px;
+ }
+ .list-unstyled li a{
+    color: #12A5F4;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 13px;
+    display: block;
+    padding: 4px 4px 4px 13px;
+ }
+ .list-unstyled li:hover{
+    background-color: #12A5F4;
+    color: #fff;
+ }
+ .list-unstyled li a:hover{
+    color: #fff;
+ }
+ #cart_button{
+    color: #12A5F4;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    margin-left: 15px;
+    padding: 4px 6px 4px 6px;
+    border: 1px solid #12A5F4;
+    border-radius: 3px;
+ }
+ #cart_button:hover{
+    background-color: #12A5F4;
+    color: #fff;
+ }
+ #logo1 a{
+    color: #12A5F4;
+    text-decoration: none;
+ }
+ #logo2 a{
+    color: #868686;
+    text-decoration: none;
+ }

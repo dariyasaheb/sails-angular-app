@@ -1,0 +1,68 @@
+<style >
+    #thumbWrapper{
+        width: 570px;
+        overflow: auto;
+    }
+
+
+    #thumblist{
+       
+    margin: 0;
+    }
+
+    #thumblist li{
+        display: inline-block;
+        padding: 2px;
+        cursor: pointer;
+    }
+
+    #thumblist li:hover{
+    opacity: 0.5;
+}
+
+</style>
+
+
+
+
+    <div class="container">
+    
+        <div class="row" style="padding-top:20px; padding-left:30px;">
+                <div class="row carousel-holder">
+    <div class="col-md-6">
+    <img ng-src="{{currentimage.image}}" alt="{{currentimage.description}}" width="570" height="400" >
+     <a class="left carousel-control"  >
+                                <span class="glyphicon glyphicon-chevron-left" ng-click="prev()"></span>
+                            </a>
+                            <a class="right carousel-control" >
+                                <span class="glyphicon glyphicon-chevron-right" ng-click="next()"></span>
+                            </a>
+
+    </div>
+
+
+
+
+
+    <div class="col-md-5" style="padding-left:20px;">
+                    <div class="row" >
+                        <div class="col-md-12 pull-left">
+                            <h1>{{product.name}}</h1>
+                            <p>{{product.description}}</p>
+                            <div >
+                            <h2 style="color:#5ac6c7;">{{product.discountprice}}</h2>
+                            <h4>Estimate Orginal <s>{{product.price}}</s></h4>
+                            <select ng-model="qty" ng-init="qty=1">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                                <button class="btn" style="background-color:#5ac6c7; padding:2px 50px;" ng-click="addToCart(product, qty)"><h4>Buy Now</h4></button>
+                            </div>
+                        
+                        </div>
+                       
+                    </div>
+                </div>
+        </div> 
+</div>
+

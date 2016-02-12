@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-sm-12">
+			<table class="table">
+				<thead>
+					<th></th>
+					<th align='center'>Name</th>
+					<th align="center">Price</th>
+					<th align="center">Qty</th>
+					<th align="center">Total</th>
+					<th></th>
+
+				</thead>
+				  <tr ng-repeat="item in cart.items track by $index">
+				  	<td><img ng-src="{{item.url}}" width="100" height="100"></td>
+				    <td style="padding-top: 40px;">{{item.name}}</td>
+				    <td style="padding-top: 40px;">{{item.price}}</td>
+				    <td style="padding-top: 40px;">{{item.qty}}</td>
+				    <td style="padding-top: 40px;">{{item.total_price}}</td>
+				    <td style="padding-top: 40px;"><button class="btn btn-danger" ng-click="deleteItem(item.product_id)" >Remove from cart</button></td>
+
+				  </tr>
+				  <thead>
+				  <th></th>
+					<th>Total</th>
+					<th></th>
+					<th>{{cart.count}}</th>
+					<th>{{cart.total_cart_price}}</th>
+					<th ><a href="#/checkout"><button class="btn btn-success">Proceed To Pay</button></a></th>
+
+				</thead>
+			</table>
+	</div>	
+</div>

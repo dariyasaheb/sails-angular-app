@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Eshop">
+
+<head>
+    
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop Homepage - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+</head>
+
+<body>
+<div id="top_cart">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="pull-right">
+                    <span id="head_phone">Call : +91 8801687680</span> |
+                    <span id="head_location"><span class="glyphicon glyphicon-map-marker"></span> Bangalore</span> 
+                    
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-6">
+               <a href="#/"> <h1 id="logo_heading"><span id="logo1">{{title.site1}}</span><span id="logo2">{{title.site2}}</span></h1></a>
+               </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <h3 id="logo_heading" style="font-size:20px;margin-top: 50px;"><span id="logo1"><a href="#/login">Login</a></span> / <span id="logo2"><a href="#/signup">Signup</a></span> <a href="#/cart" id="cart_button">CART</a></h3>
+            </div>
+            <div class="col-md-12">
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown" ng-repeat="cat in categories">
+                            <a href="#/category/{{cat.category_url}}">{{cat.name}}</a>
+                            <div class="dropdown-menu" style="min-width: 160px;">
+                                <div class="dropdown-inner">
+                                        <ul class="list-unstyled">
+                                                <li ng-repeat= "items in cat.subcategory">
+                                                <a href="#/category/{{cat.category_url}}/{{items.subcategory_url}}">{{items.name}}</a></li>
+                                         
+                                        </ul>
+                              	</div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    <div class="col-md-2 pull-right">
+                        <span>
+                            <input type="search" placeholder = "search here" class="input-sm input-search">
+                        </span>
+                    </div>
+                    
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+
+            <!-- Page Content -->
+            </div>
+        </div>
+    
+       <!-- body -->
+        <div class="row">
+
+            <div class="col-md-12" >
+
+               <ng-view></ng-view>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Room Cart 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="js/modules/app.js"></script>
+    
+
+</body>
+
+</html>

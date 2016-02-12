@@ -1,0 +1,108 @@
+<div class='row'>
+                <div class='col-sm-4'>
+                    
+                        <form class='form-horizontal' action='/login' method='POST'>
+                        
+                            <h2 > Log In </h2>
+                            <div class='row form-group'>
+                                <label for='username' class='control-label col-sm-4'> Firstname: </label>
+                                <div class='col-sm-4'>
+                                    <input type='text' name='username' class='form-control' required />
+                                </div>
+
+                            </div>
+                            <div class='row form-group'>
+                                <label for='Lastname' class='control-label col-sm-4'> Lastname: </label>
+                                <div class='col-sm-4'>
+                                    <input type='password' name='password' class='form-control' required />
+                                </div>
+                            </div>
+                            <div class='row form-group'>
+                                <label for='Address' class='control-label col-sm-4'> Address1: </label>
+                                <div class='col-sm-4'>
+                                    <input type='text' name='Address' class='form-control' required />
+                                </div>
+                            </div>
+                            <div class='row form-group'>
+                                <label for='Address2' class='control-label col-sm-4'> Address2: </label>
+                                <div class='col-sm-4'>
+                                    <input type='password' name='password' class='form-control' required />
+                                </div>
+                            </div>
+                            <div class='row form-group'>
+                                <label for='City' class='control-label col-sm-4'> City: </label>
+                                <div class='col-sm-4'>
+                                    <input type='text' name='City' class='form-control' required />
+                                </div>
+                            </div>
+                            <div class='row form-group'>
+                                <label for='State' class='control-label col-sm-4'> State: </label>
+                                <div class='col-sm-4'>
+                                    <select> Plz select the State
+                                    	<option>Andhra Pradesh</option>
+                                    	<option>Andhra Pradesh</option>
+                                    	<option>Andhra Pradesh</option>
+                                    	<option>Andhra Pradesh</option>
+                                    	<option>Andhra Pradesh</option>
+                                    	<option>Andhra Pradesh</option>
+                                    	
+                                    </select>
+                                </div>
+                            </div>
+                           
+                        </form>
+        		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="col-sm-4">
+			<h3>Order Summary</h3>
+		
+
+			<div ng-repeat="item in cart.items">
+			
+
+				<hr>
+					<div class="col-sm-4 pull-left" >
+						<img ng-src="{{item.url}}" width="100" height="100">
+					</div>
+					<div class="col-sm-6">
+						<h4> {{item.name}} </h4>
+					</div>
+					<div class="col-sm-1 pull-right">
+						<h4> {{item.price}} </h4>
+					</div>
+			</div>
+			
+			<div class="row">	
+			<div class="col-sm-12 pull-right">
+				<P><b>Total : {{cart.total_cart_price }}</b></P>
+				</div>
+			</div>
+			
+		
+		</div>
+		
+	</div>	
+</div>
